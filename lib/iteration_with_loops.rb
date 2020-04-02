@@ -4,10 +4,16 @@ def find_min_in_nested_arrays(src)
 low_temp_array = []
 row_index
 while row_index < src.length do
-  column_index = 0
-  lowest_temp = 0
-  while column_index < src[row_index].length do
-    if 
-
-
+  element_index = 0
+  lowest_temp = 10000
+  while element_index < src[row_index].length do
+    if src[row_index][element_index] < lowest_temp
+      lowest_temp = src[row_index][element_index]
+    end
+    element_index += 1 
+  end 
+  low_temp_array << lowest_temp
+  row_index += 1 
+end
+low_temp_array
 end
